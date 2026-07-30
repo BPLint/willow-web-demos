@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flaherty Plumbing & Heating | Norwalk, CT</title>
+  <meta name="description" content="Flaherty Plumbing & Heating, trusted plumbers in Norwalk, CT offering exceptional plumbing, heating and boiler services since 1949." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: { primary: { 400: '#fbbf24', 500: '#f59e0b', 600: '#d97706' }, dark: { 900: '#0f172a', 800: '#1e293b', 700: '#334155' } } } } }
+  </script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: #0f172a; color: #e2e8f0; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%); }
+    .service-card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 1.5rem; transition: all .2s; }
+    .service-card:hover { border-color: #f59e0b; transform: translateY(-2px); box-shadow: 0 8px 25px -5px rgba(245,158,11,0.15); }
+    .review-card { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <!-- Emergency Banner -->
+  <div class="bg-amber-600/10 border-b border-amber-600/20 text-center py-2 text-sm text-amber-400">
+    24/7 Emergency Service Available
+  </div>
+
+  <!-- Navigation -->
+  <nav class="border-b border-surface-700 sticky top-0 bg-dark-900/95 backdrop-blur z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-white flex items-center gap-2">
+        <span class="text-amber-400 text-2xl">🔧</span> Flaherty Plumbing & Heating
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#services" class="text-slate-300 hover:text-amber-400 transition">Services</a>
+        <a href="#about" class="text-slate-300 hover:text-amber-400 transition">About</a>
+        <a href="#reviews" class="text-slate-300 hover:text-amber-400 transition">Reviews</a>
+        <a href="#contact" class="text-slate-300 hover:text-amber-400 transition">Contact</a>
+        <a href="tel:2038661107" class="bg-amber-500 hover:bg-amber-600 text-dark-900 font-bold px-4 py-2 rounded-lg text-sm transition">(203) 866-1107</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <div class="inline-block bg-amber-500/10 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full mb-4">Serving Norwalk Since 1949</div>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+        Norwalk's Trusted Name in<br/>
+        <span class="text-amber-400">Plumbing, Heating & Boilers</span>
+      </h1>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-8">
+        Providing Fairfield County with exceptional service for over 75 years. Licensed, professional, and always on time.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="tel:2038661107" class="bg-amber-500 hover:bg-amber-600 text-dark-900 font-bold px-8 py-3.5 rounded-full transition text-lg">🚨 (203) 866-1107</a>
+        <span class="text-slate-500 self-center text-sm">or email flahertyplumbingheating@gmail.com</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-white text-center mb-2">Our Services</h2>
+      <p class="text-slate-500 text-sm text-center mb-10">Residential and commercial plumbing, heating, and boiler services</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="service-card text-center">
+          <div class="text-4xl mb-3">🔧</div>
+          <h3 class="font-bold text-white mb-2">Plumbing</h3>
+          <p class="text-slate-400 text-sm">From leaky faucets to full repipes, our licensed plumbers handle it all. Repairs, installations, drain cleaning, and more.</p>
+        </div>
+        <div class="service-card text-center">
+          <div class="text-4xl mb-3">🔥</div>
+          <h3 class="font-bold text-white mb-2">Heating</h3>
+          <p class="text-slate-400 text-sm">Complete heating solutions from installation to maintenance to repair. Expert service for hydronic heating systems.</p>
+        </div>
+        <div class="service-card text-center">
+          <div class="text-4xl mb-3">⚙️</div>
+          <h3 class="font-bold text-white mb-2">Boilers</h3>
+          <p class="text-slate-400 text-sm">Competitively priced boiler installations and water heater repairs. Guaranteed satisfaction on every job.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 bg-dark-800/50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-2xl font-bold text-white mb-4">About Flaherty Plumbing & Heating</h2>
+          <p class="text-slate-400 mb-4 leading-relaxed">
+            For over 75 years, Flaherty Plumbing & Heating has been proud to serve the Norwalk and Fairfield County community. We were founded on the principle that quality work at a fair price builds lasting relationships with our customers.
+          </p>
+          <p class="text-slate-400 mb-4 leading-relaxed">
+            Our team of licensed professionals handles everything from emergency plumbing repairs to complete heating system installations. Whether it's a burst pipe at 2 AM or a planned boiler upgrade, we treat every home like our own.
+          </p>
+          <div class="flex items-center gap-4 mt-6">
+            <div class="text-center">
+              <div class="text-amber-400 text-2xl font-bold">75+</div>
+              <div class="text-slate-500 text-xs">Years Serving Norwalk</div>
+            </div>
+            <div class="w-px h-10 bg-surface-700"></div>
+            <div class="text-center">
+              <div class="text-amber-400 text-2xl font-bold">4.7</div>
+              <div class="text-slate-500 text-xs">Google Rating</div>
+            </div>
+            <div class="w-px h-10 bg-surface-700"></div>
+            <div class="text-center">
+              <div class="text-amber-400 text-2xl font-bold">Licensed</div>
+              <div class="text-slate-500 text-xs">& Insured</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-dark-700 rounded-xl p-8 text-center">
+          <div class="text-6xl mb-4">🏠</div>
+          <h3 class="text-white font-bold mb-2">Get an Estimate Today</h3>
+          <p class="text-slate-400 text-sm mb-4">No obligation, upfront pricing for all jobs.</p>
+          <a href="tel:2038661107" class="inline-block bg-amber-500 hover:bg-amber-600 text-dark-900 font-bold px-6 py-3 rounded-lg transition">Call (203) 866-1107</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-white text-center mb-2">What Our Customers Say</h2>
+      <p class="text-slate-500 text-sm text-center mb-8">Rated 4.7 stars based on 17 reviews on Google</p>
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="review-card">
+          <div class="flex items-center gap-1 text-amber-400 text-sm mb-2">★★★★★</div>
+          <p class="text-slate-300 text-sm italic">"Excellent service. Have been using them for years. They are always clean, professional, and reasonably priced."</p>
+          <p class="text-slate-600 text-xs mt-2">- Kevin C.</p>
+        </div>
+        <div class="review-card">
+          <div class="flex items-center gap-1 text-amber-400 text-sm mb-2">★★★★★</div>
+          <p class="text-slate-300 text-sm italic">"Thoughtful, efficient and responsive. They are excellent at what they do. Really can't say enough about Jeff and his team."</p>
+          <p class="text-slate-600 text-xs mt-2">- Lauren B.</p>
+        </div>
+        <div class="review-card">
+          <div class="flex items-center gap-1 text-amber-400 text-sm mb-2">★★★★★</div>
+          <p class="text-slate-300 text-sm italic">"Very reliable, high quality work and fair pricing. Diagnosed the problem in 5 minutes. Work completed before the scheduled time."</p>
+          <p class="text-slate-600 text-xs mt-2">- Ron P.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-dark-800/50">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold text-white mb-2">Contact Us</h2>
+      <p class="text-slate-500 text-sm mb-8">Get in touch for a free estimate or emergency service</p>
+      <div class="flex flex-col md:flex-row justify-center gap-8 items-center">
+        <div class="text-center">
+          <div class="text-3xl mb-2">📞</div>
+          <p class="text-slate-400 text-sm">Call or Text</p>
+          <p class="text-white font-bold text-lg"><a href="tel:2038661107" class="hover:text-amber-400 transition">(203) 866-1107</a></p>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl mb-2">📧</div>
+          <p class="text-slate-400 text-sm">Email</p>
+          <p class="text-white">flahertyplumbingheating@gmail.com</p>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl mb-2">📍</div>
+          <p class="text-slate-400 text-sm">Service Area</p>
+          <p class="text-white">Norwalk, CT & Fairfield County</p>
+        </div>
+      </div>
+      <p class="text-slate-500 text-xs mt-6">24/7 Emergency Service Available</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-surface-700 py-6 text-center text-xs text-slate-600">
+    <p>&copy; 2026 Flaherty Plumbing & Heating. Serving Norwalk since 1949.</p>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Plumber",
+    "name": "Flaherty Plumbing & Heating",
+    "address": { "@type": "PostalAddress", "addressLocality": "Norwalk", "addressRegion": "CT" },
+    "telephone": "(203) 866-1107",
+    "email": "flahertyplumbingheating@gmail.com",
+    "areaServed": "Fairfield County, CT",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" }
+    ]
+  }
+  </script>
+</body>
+</html>
