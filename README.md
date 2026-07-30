@@ -2,3 +2,4 @@
 
 Client demo sites deployed automatically.
 
+Public repo for now.
