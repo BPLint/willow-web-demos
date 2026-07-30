@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Business Name] · [Town], CT</title>
+  <meta name="description" content="[Business Name] — [tagline]. Serving [Town] CT. Order online or book an appointment." />
+  <meta property="og:title" content="[Business Name] · [Town], CT" />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"[LocalBusiness/Restaurant/DentalPractice]","name":"[Business Name]","telephone":"(203) 555-0000","url":"https://[business].com","sameAs":["https://facebook.com/...","https://instagram.com/..."]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']},colors:{brand:{50:'#fdf4ff',100:'#fae8ff',200:'#f5d0fe',300:'#f0abfc',400:'#e879f9',500:'#d946ef',600:'#c026d3',700:'#a21caf',800:'#86198f',900:'#701a75'}}}}}</script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}body{font-family:'Inter',system-ui,sans-serif}
+    .hero-grad{background:linear-gradient(165deg,#1a1a2e,#16213e,#0f3460)}
+    .card-hover{transition:all .3s ease}.card-hover:hover{transform:translateY(-4px);box-shadow:0 20px 40px -12px rgba(0,0,0,.15)}
+    .reveal{opacity:0;transform:translateY(30px);transition:all .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    .tab-btn.active{background:#c026d3;color:white}
+    .tab-content{display:none}.tab-content.active{display:block}
+    /* Chat bubble */ #chat-bubble{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:#c026d3;color:white;display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;box-shadow:0 4px 20px rgba(192,38,211,.4);z-index:100;transition:transform .2s}#chat-bubble:hover{transform:scale(1.1)}
+    /* Cart badge */ .cart-badge{position:absolute;top:-6px;right:-6px;background:#ef4444;color:white;width:20px;height:20px;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700}
+    /* Accordion */ .faq-q{cursor:pointer;padding:16px 0;border-bottom:1px solid #e5e7eb;display:flex;justify-content:space-between;font-weight:600}.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:#6b7280;font-size:14px}.faq-a.open{max-height:300px;padding-bottom:16px}
+  </style>
+</head>
+<body>
+  <div id="chat-bubble" onclick="alert('Live chat would open here. Integrate with Tidio / Crisp / WhatsApp API.')">💬</div>
+
+  <div class="fixed top-0 w-full z-50">
+    <div class="bg-brand-800 text-white/80 text-xs text-center py-1.5 tracking-wide">🎉 New customers: Use code <span class="font-bold text-white">WELCOME10</span> for 10% off your first order</div>
+    <nav class="bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+      <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+        <a href="#" class="font-extrabold text-xl tracking-tight" style="color:#701a75">✨ [Business Name]</a>
+        <div class="hidden md:flex gap-6 text-sm font-medium text-gray-600">
+          <a href="#menu" class="hover:text-brand-600">Menu</a>
+          <a href="#order" class="hover:text-brand-600">Order</a>
+          <a href="#about" class="hover:text-brand-600">About</a>
+          <a href="#reviews" class="hover:text-brand-600">Reviews</a>
+          <a href="#contact" class="hover:text-brand-600">Contact</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="#order" class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition relative">🛒 Order Now <span class="cart-badge">0</span></a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <section class="hero-grad pt-20 min-h-[70vh] flex items-center relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 py-20 w-full relative z-10">
+      <span class="inline-block bg-white/10 text-white/80 text-xs font-semibold px-4 py-1.5 rounded-full mb-5 border border-white/20">📍 [Town], CT · Open [days/hours]</span>
+      <h1 class="text-5xl sm:text-6xl font-extrabold text-white leading-[1.05] max-w-2xl">[Business name headline — what you offer.]</h1>
+      <p class="text-white/60 text-xl mt-4 max-w-xl">[Value proposition — what makes this place special.]</p>
+      <div class="flex flex-wrap gap-4 mt-8">
+        <a href="#order" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-3.5 rounded-full transition shadow-xl text-sm">🛒 Order Online</a>
+        <a href="#menu" class="border-2 border-white/30 text-white font-medium px-8 py-3.5 rounded-full hover:bg-white/10 transition text-sm">📋 View Menu</a>
+      </div>
+      <div class="flex items-center gap-6 mt-8 text-white/50 text-sm flex-wrap">
+        <span>⭐ 4.8 · [N] reviews</span><span class="w-1 h-1 bg-white/20 rounded-full"></span>
+        <span>🚚 Free delivery over $[X]</span><span class="w-1 h-1 bg-white/20 rounded-full"></span>
+        <span>🕐 Open [days/hours]</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-white border-b py-5">
+    <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div class="text-sm"><span class="text-2xl block mb-1">🕐</span><strong>Since [year]</strong><br/><span class="text-gray-500 text-xs">Serving [Town]</span></div>
+      <div class="text-sm"><span class="text-2xl block mb-1">⭐</span><strong>4.8 stars</strong><br/><span class="text-gray-500 text-xs">[N] reviews</span></div>
+      <div class="text-sm"><span class="text-2xl block mb-1">🚚</span><strong>Free delivery</strong><br/><span class="text-gray-500 text-xs">Orders over $[X]</span></div>
+      <div class="text-sm"><span class="text-2xl block mb-1">💳</span><strong>Pay online</strong><br/><span class="text-gray-500 text-xs">CC · Apple Pay · Google Pay</span></div>
+    </div>
+  </div>
+
+  <!-- Tabbed Menu -->
+  <section id="menu" class="py-20 reveal">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10"><span class="text-brand-600 text-sm font-semibold tracking-wide uppercase">Our Menu</span><h2 class="text-3xl font-bold mt-2">What we offer</h2></div>
+      <div class="flex justify-center gap-2 mb-8 flex-wrap">
+        <button class="tab-btn active px-5 py-2 rounded-full text-sm font-medium bg-gray-100 hover:bg-brand-100 transition" onclick="switchTab(this,'tab-category1')">[Category 1]</button>
+        <button class="tab-btn px-5 py-2 rounded-full text-sm font-medium bg-gray-100 hover:bg-brand-100 transition" onclick="switchTab(this,'tab-category2')">[Category 2]</button>
+        <button class="tab-btn px-5 py-2 rounded-full text-sm font-medium bg-gray-100 hover:bg-brand-100 transition" onclick="switchTab(this,'tab-category3')">[Category 3]</button>
+      </div>
+      <div id="tab-category1" class="tab-content active grid sm:grid-cols-2 gap-4">
+        <div class="bg-white rounded-xl p-4 border card-hover flex gap-4"><div class="w-20 h-20 rounded-lg bg-gray-100 flex-shrink-0"></div><div><h3 class="font-bold">[Item Name]</h3><p class="text-xs text-gray-500 mt-1">[Description]</p><p class="text-sm font-bold mt-2 text-brand-700">$[X.XX]</p></div></div>
+        <div class="bg-white rounded-xl p-4 border card-hover flex gap-4"><div class="w-20 h-20 rounded-lg bg-gray-100 flex-shrink-0"></div><div><h3 class="font-bold">[Item Name]</h3><p class="text-xs text-gray-500 mt-1">[Description]</p><p class="text-sm font-bold mt-2 text-brand-700">$[X.XX]</p></div></div>
+        <div class="bg-white rounded-xl p-4 border card-hover flex gap-4"><div class="w-20 h-20 rounded-lg bg-gray-100 flex-shrink-0"></div><div><h3 class="font-bold">[Item Name]</h3><p class="text-xs text-gray-500 mt-1">[Description]</p><p class="text-sm font-bold mt-2 text-brand-700">$[X.XX]</p></div></div>
+        <div class="bg-white rounded-xl p-4 border card-hover flex gap-4"><div class="w-20 h-20 rounded-lg bg-gray-100 flex-shrink-0"></div><div><h3 class="font-bold">[Item Name]</h3><p class="text-xs text-gray-500 mt-1">[Description]</p><p class="text-sm font-bold mt-2 text-brand-700">$[X.XX]</p></div></div>
+      </div>
+      <div id="tab-category2" class="tab-content grid sm:grid-cols-2 gap-4">
+        <div class="bg-white rounded-xl p-4 border card-hover flex gap-4"><div class="w-20 h-20 rounded-lg bg-gray-100 flex-shrink-0"></div><div><h3 class="font-bold">[Item Name]</h3><p class="text-xs text-gray-500 mt-1">[Description]</p><p class="text-sm font-bold mt-2 text-brand-700">$[X.XX]</p></div></div>
+        <div class="bg-white rounded-xl p-4 border card-hover flex gap-4"><div class="w-20 h-20 rounded-lg bg-gray-100 flex-shrink-0"></div><div><h3 class="font-bold">[Item Name]</h3><p class="text-xs text-gray-500 mt-1">[Description]</p><p class="text-sm font-bold mt-2 text-brand-700">$[X.XX]</p></div></div>
+      </div>
+      <div id="tab-category3" class="tab-content grid sm:grid-cols-2 gap-4">
+        <div class="bg-white rounded-xl p-4 border card-hover flex gap-4"><div class="w-20 h-20 rounded-lg bg-gray-100 flex-shrink-0"></div><div><h3 class="font-bold">[Item Name]</h3><p class="text-xs text-gray-500 mt-1">[Description]</p><p class="text-sm font-bold mt-2 text-brand-700">$[X.XX]</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order / Booking -->
+  <section id="order" class="py-20 bg-gray-50 reveal">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-10"><span class="text-brand-600 text-sm font-semibold tracking-wide uppercase">Order / Book</span><h2 class="text-3xl font-bold mt-2">Place your order or book an appointment</h2></div>
+      <div class="bg-white rounded-2xl p-8 border max-w-lg mx-auto">
+        <form class="space-y-3">
+          <input type="text" placeholder="Full name" class="w-full px-4 py-3 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-brand-400" />
+          <input type="tel" placeholder="Phone" class="w-full px-4 py-3 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-brand-400" />
+          <input type="email" placeholder="Email" class="w-full px-4 py-3 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-brand-400" />
+          <select class="w-full px-4 py-3 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-brand-400"><option>Pickup</option><option>Delivery</option><option>Dine-in / Appointment</option></select>
+          <select class="w-full px-4 py-3 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-brand-400"><option>Now</option><option>Later — select time</option></select>
+          <textarea rows="3" placeholder="Special instructions or items to order" class="w-full px-4 py-3 rounded-xl border text-sm outline-none focus:ring-2 focus:ring-brand-400 resize-none"></textarea>
+          <button type="button" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3.5 rounded-xl transition text-sm">Submit Order / Request</button>
+          <p class="text-center text-xs text-gray-400 mt-2">🔒 Secure checkout. Pay when you arrive or online.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 bg-white reveal">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <span class="text-brand-600 text-sm font-semibold tracking-wide uppercase">Our Story</span>
+      <h2 class="text-3xl font-bold mt-2">[Business Name] — serving [Town] since [year]</h2>
+      <p class="text-gray-600 mt-4 max-w-2xl mx-auto leading-relaxed">[The story of the business. Who started it, why, what makes it special. Keep it authentic and personal — this is the section that makes people want to support you.]</p>
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <div class="bg-gray-50 rounded-xl p-6"><span class="text-3xl">🥇</span><h3 class="font-bold mt-3">Quality ingredients</h3><p class="text-sm text-gray-500 mt-1">[Detail about sourcing, preparation, standards.]</p></div>
+        <div class="bg-gray-50 rounded-xl p-6"><span class="text-3xl">🤝</span><h3 class="font-bold mt-3">Family-owned</h3><p class="text-sm text-gray-500 mt-1">[Detail about the family/team behind it.]</p></div>
+        <div class="bg-gray-50 rounded-xl p-6"><span class="text-3xl">🌱</span><h3 class="font-bold mt-3">Community first</h3><p class="text-sm text-gray-500 mt-1">[Detail about community involvement.]</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="py-20 reveal">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10"><span class="text-brand-600 text-sm font-semibold tracking-wide uppercase">Testimonials</span><h2 class="text-3xl font-bold mt-2">What people are saying</h2></div>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-white rounded-xl p-6 border"><p class="text-sm leading-relaxed">"[Review — detail what was great about the experience, food/service, atmosphere.]"</p><div class="flex items-center gap-2 mt-4"><div class="w-8 h-8 rounded-full bg-gray-200"></div><div><p class="text-sm font-semibold">[Name]</p><p class="text-xs text-gray-400">Google · ★★★★★</p></div></div></div>
+        <div class="bg-white rounded-xl p-6 border"><p class="text-sm leading-relaxed">"[Review — detail what was great about the experience, food/service, atmosphere.]"</p><div class="flex items-center gap-2 mt-4"><div class="w-8 h-8 rounded-full bg-gray-200"></div><div><p class="text-sm font-semibold">[Name]</p><p class="text-xs text-gray-400">Yelp · ★★★★★</p></div></div></div>
+        <div class="bg-white rounded-xl p-6 border"><p class="text-sm leading-relaxed">"[Review — detail what was great about the experience, food/service, atmosphere.]"</p><div class="flex items-center gap-2 mt-4"><div class="w-8 h-8 rounded-full bg-gray-200"></div><div><p class="text-sm font-semibold">[Name]</p><p class="text-xs text-gray-400">Google · ★★★★★</p></div></div></div>
+        <div class="bg-white rounded-xl p-6 border"><p class="text-sm leading-relaxed">"[Review — detail what was great about the experience, food/service, atmosphere.]"</p><div class="flex items-center gap-2 mt-4"><div class="w-8 h-8 rounded-full bg-gray-200"></div><div><p class="text-sm font-semibold">[Name]</p><p class="text-xs text-gray-400">Facebook · ★★★★★</p></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-gray-900 reveal">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-3xl font-bold text-white">Visit us</h2>
+          <p class="text-gray-400 mt-3 text-sm">We'd love to see you. Come by, give us a call, or order online.</p>
+          <div class="mt-6 space-y-4 text-gray-400 text-sm">
+            <p>📞 <span class="text-white font-bold">(203) 555-0000</span></p>
+            <p>✉️ <span class="text-white">hello@[business].com</span></p>
+            <p>📍 <span class="text-white">[Address], [Town], CT</span></p>
+            <p>🕐 <span class="text-white">[Hours — e.g., Mon–Sat 7am–9pm · Sun 8am–3pm]</span></p>
+          </div>
+          <div class="flex gap-3 mt-6">
+            <a href="#" class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full text-sm transition">📸 Instagram</a>
+            <a href="#" class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full text-sm transition">👍 Facebook</a>
+            <a href="#" class="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-full text-sm transition">🐦 Twitter/X</a>
+          </div>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-6 border border-white/10">
+          <p class="text-white/60 text-sm text-center mb-4">Send us a message</p>
+          <form class="space-y-3">
+            <input type="text" placeholder="Name" class="w-full px-4 py-2.5 rounded-xl border-0 bg-white text-sm outline-none" />
+            <input type="email" placeholder="Email" class="w-full px-4 py-2.5 rounded-xl border-0 bg-white text-sm outline-none" />
+            <textarea rows="3" placeholder="Message" class="w-full px-4 py-2.5 rounded-xl border-0 bg-white text-sm outline-none resize-none"></textarea>
+            <button type="button" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl transition text-sm">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="h-64 bg-gray-700 flex items-center justify-center text-gray-400 text-sm">📍 [Address] — Embedded Google Map</div>
+
+  <footer class="bg-gray-950 text-gray-500 py-10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 text-sm">
+        <div><h4 class="font-bold text-white mb-3">✨ [Business Name]</h4><p class="text-xs leading-relaxed">Serving [Town] since [year]. [Tagline].</p></div>
+        <div><h4 class="font-bold text-white mb-3">Hours</h4><ul class="space-y-1 text-xs"><li>Mon–Fri: [hours]</li><li>Sat: [hours]</li><li>Sun: [hours]</li></ul></div>
+        <div><h4 class="font-bold text-white mb-3">Quick Links</h4><ul class="space-y-1 text-xs"><li>Menu</li><li>Order Online</li><li>Gallery</li><li>Contact</li></ul></div>
+        <div><h4 class="font-bold text-white mb-3">Follow Us</h4><ul class="space-y-1 text-xs"><li>Instagram</li><li>Facebook</li><li>Twitter/X</li></ul></div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-6 text-center text-xs">© 2026 [Business Name] · [Town], CT</div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') }) }, {threshold:.1});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    // Tab switching
+    function switchTab(btn, tabId) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+</html>

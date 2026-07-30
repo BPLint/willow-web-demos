@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Business Name] · [Town], CT</title>
+  <meta name="description" content="[Business Name] — [tagline]. Serving [Town] CT. Call (203) 555-0000." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']},colors:{trade:{50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af',900:'#1e3a8a'}}}}}</script>
+  <style>
+    html{scroll-behavior:smooth}body{font-family:'Inter',system-ui,sans-serif}
+    .hero-bg{background:linear-gradient(165deg,#1e3a8a,#1e40af,#2563eb)}
+    .card-hover{transition:all .3s ease}.card-hover:hover{transform:translateY(-4px);box-shadow:0 20px 40px -12px rgba(0,0,0,.15)}
+    /* Scroll reveal */ .reveal{opacity:0;transform:translateY(24px);transition:all .6s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    /* Lightbox */ .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);z-index:999;justify-content:center;align-items:center}.lightbox.open{display:flex}.lightbox img{max-width:90%;max-height:90%;border-radius:12px}.lightbox .close{position:absolute;top:20px;right:30px;color:white;font-size:30px;cursor:pointer}
+    /* Gallery grid */ .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}.gallery-grid img{width:100%;height:200px;object-fit:cover;border-radius:12px;cursor:pointer;transition:transform .3s}.gallery-grid img:hover{transform:scale(1.03)}
+    /* Counter animation */ .count-up{font-size:2.5rem;font-weight:800;color:#2563eb}
+    /* Carousel */ .carousel{overflow:hidden;position:relative}.carousel-track{display:flex;transition:transform .4s ease}.carousel-slide{min-width:100%;padding:10px}
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+  <div id="lightbox" class="lightbox" onclick="this.classList.remove('open')"><span class="close">&times;</span><img id="lightbox-img" src="" alt="" /></div>
+
+  <div class="fixed top-0 w-full z-50">
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-200">
+      <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+        <a href="#" class="font-bold text-lg text-trade-800">🔧 [Business Name]</a>
+        <div class="hidden md:flex gap-6 text-sm font-medium text-gray-600">
+          <a href="#gallery" class="hover:text-trade-600">Gallery</a>
+          <a href="#services" class="hover:text-trade-600">Services</a>
+          <a href="#team" class="hover:text-trade-600">Team</a>
+          <a href="#reviews" class="hover:text-trade-600">Reviews</a>
+          <a href="#contact" class="hover:text-trade-600">Contact</a>
+        </div>
+        <a href="#contact" class="bg-trade-600 hover:bg-trade-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition">Free Quote</a>
+      </div>
+    </nav>
+  </div>
+
+  <section class="hero-bg pt-14 min-h-[70vh] flex items-center">
+    <div class="max-w-6xl mx-auto px-6 py-16 w-full">
+      <span class="inline-block bg-white/15 text-white/90 text-xs font-semibold px-4 py-1.5 rounded-full mb-5 border border-white/20">[N] years serving [Town] &amp; [County]</span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-white leading-tight max-w-3xl">[Headline — bold promise that differentiates.]</h1>
+      <p class="text-white/70 text-lg mt-4 max-w-xl">[Subheadline — the value prop in one or two sentences.]</p>
+      <div class="flex flex-wrap gap-4 mt-7">
+        <a href="#contact" class="bg-white text-trade-800 font-semibold px-7 py-3 rounded-full hover:bg-gray-100 transition shadow-lg text-sm">📋 Free Consultation</a>
+        <a href="tel:2035550000" class="border-2 border-white/30 text-white font-medium px-7 py-3 rounded-full hover:bg-white/10 transition text-sm">📞 (203) 555-0000</a>
+      </div>
+      <div class="flex items-center gap-6 mt-8 text-white/50 text-xs flex-wrap">
+        <span>⭐ 4.9 · [N] reviews</span>
+        <span class="w-1 h-1 bg-white/20 rounded-full"></span>
+        <span>✅ Licensed & Insured</span>
+        <span class="w-1 h-1 bg-white/20 rounded-full"></span>
+        <span>🏆 [Award/Recognition]</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats bar -->
+  <div class="bg-white border-b py-8">
+    <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div><div class="count-up" data-target="20">0</div><div class="text-xs text-gray-500 mt-1">Years in business</div></div>
+      <div><div class="count-up" data-target="500">0</div><div class="text-xs text-gray-500 mt-1">Projects completed</div></div>
+      <div><div class="count-up" data-target="4.9">0</div><div class="text-xs text-gray-500 mt-1">Star rating</div></div>
+      <div><div class="count-up" data-target="100">0</div><div class="text-xs text-gray-500 mt-1">% Satisfaction</div></div>
+    </div>
+  </div>
+
+  <section id="gallery" class="py-20 reveal">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <span class="text-trade-600 text-sm font-semibold tracking-wide uppercase">Our Work</span>
+        <h2 class="text-3xl font-bold mt-2">Project Gallery</h2>
+      </div>
+      <div class="gallery-grid">
+        <img src="https://placehold.co/600x400/1e40af/white?text=Project+1" alt="Project 1" onclick="openLightbox(this.src)" />
+        <img src="https://placehold.co/600x400/2563eb/white?text=Project+2" alt="Project 2" onclick="openLightbox(this.src)" />
+        <img src="https://placehold.co/600x400/1e3a8a/white?text=Project+3" alt="Project 3" onclick="openLightbox(this.src)" />
+        <img src="https://placehold.co/600x400/3b82f6/white?text=Project+4" alt="Project 4" onclick="openLightbox(this.src)" />
+        <img src="https://placehold.co/600x400/60a5fa/white?text=Project+5" alt="Project 5" onclick="openLightbox(this.src)" />
+        <img src="https://placehold.co/600x400/93c5fd/black?text=Project+6" alt="Project 6" onclick="openLightbox(this.src)" />
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-20 bg-white reveal">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <span class="text-trade-600 text-sm font-semibold tracking-wide uppercase">What We Do</span>
+        <h2 class="text-3xl font-bold mt-2">Services</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-gray-50 rounded-xl p-6 card-hover"><span class="text-4xl">🔹</span><h3 class="font-bold mt-3">[Service 1]</h3><p class="text-gray-500 text-sm mt-2">Description.</p></div>
+        <div class="bg-gray-50 rounded-xl p-6 card-hover"><span class="text-4xl">🔹</span><h3 class="font-bold mt-3">[Service 2]</h3><p class="text-gray-500 text-sm mt-2">Description.</p></div>
+        <div class="bg-gray-50 rounded-xl p-6 card-hover"><span class="text-4xl">🔹</span><h3 class="font-bold mt-3">[Service 3]</h3><p class="text-gray-500 text-sm mt-2">Description.</p></div>
+        <div class="bg-gray-50 rounded-xl p-6 card-hover"><span class="text-4xl">🔹</span><h3 class="font-bold mt-3">[Service 4]</h3><p class="text-gray-500 text-sm mt-2">Description.</p></div>
+        <div class="bg-gray-50 rounded-xl p-6 card-hover"><span class="text-4xl">🔹</span><h3 class="font-bold mt-3">[Service 5]</h3><p class="text-gray-500 text-sm mt-2">Description.</p></div>
+        <div class="bg-gray-50 rounded-xl p-6 card-hover"><span class="text-4xl">🔹</span><h3 class="font-bold mt-3">[Service 6]</h3><p class="text-gray-500 text-sm mt-2">Description.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="py-20 reveal">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <span class="text-trade-600 text-sm font-semibold tracking-wide uppercase">Who We Are</span>
+        <h2 class="text-3xl font-bold mt-2">Meet the Team</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="text-center"><div class="w-24 h-24 mx-auto rounded-full bg-trade-100 flex items-center justify-center text-3xl mb-4">👤</div><h3 class="font-bold">[Name]</h3><p class="text-sm text-gray-500">Owner / Lead [Trade]</p></div>
+        <div class="text-center"><div class="w-24 h-24 mx-auto rounded-full bg-trade-100 flex items-center justify-center text-3xl mb-4">👤</div><h3 class="font-bold">[Name]</h3><p class="text-sm text-gray-500">[Role]</p></div>
+        <div class="text-center"><div class="w-24 h-24 mx-auto rounded-full bg-trade-100 flex items-center justify-center text-3xl mb-4">👤</div><h3 class="font-bold">[Name]</h3><p class="text-sm text-gray-500">[Role]</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews carousel -->
+  <section id="reviews" class="py-20 bg-white reveal">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <span class="text-trade-600 text-sm font-semibold tracking-wide uppercase">Testimonials</span>
+        <h2 class="text-3xl font-bold mt-2">What our customers say</h2>
+      </div>
+      <div class="carousel">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide"><div class="bg-gray-50 rounded-2xl p-8 text-center max-w-lg mx-auto"><p class="text-lg leading-relaxed">"[Testimonial 1]"</p><p class="text-sm text-gray-400 mt-4">— [Name], [Town]</p></div></div>
+          <div class="carousel-slide"><div class="bg-gray-50 rounded-2xl p-8 text-center max-w-lg mx-auto"><p class="text-lg leading-relaxed">"[Testimonial 2]"</p><p class="text-sm text-gray-400 mt-4">— [Name], [Town]</p></div></div>
+          <div class="carousel-slide"><div class="bg-gray-50 rounded-2xl p-8 text-center max-w-lg mx-auto"><p class="text-lg leading-relaxed">"[Testimonial 3]"</p><p class="text-sm text-gray-400 mt-4">— [Name], [Town]</p></div></div>
+        </div>
+      </div>
+      <div class="flex justify-center gap-2 mt-4">
+        <button onclick="moveCarousel(-1)" class="bg-trade-600 text-white w-10 h-10 rounded-full hover:bg-trade-700 transition text-sm">←</button>
+        <button onclick="moveCarousel(1)" class="bg-trade-600 text-white w-10 h-10 rounded-full hover:bg-trade-700 transition text-sm">→</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-trade-800 reveal">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div>
+          <h2 class="text-3xl font-bold text-white">Let's talk about your project</h2>
+          <p class="text-white/60 mt-3 text-sm">Free consultation. No obligation. We'll walk you through options and give you a clear quote.</p>
+          <div class="mt-6 space-y-3 text-white/60 text-sm">
+            <p>📞 <span class="text-white font-bold">(203) 555-0000</span></p>
+            <p>✉️ [email]@[domain].com</p>
+            <p>🕐 Mon–Fri 7am–6pm · Sat 8am–2pm</p>
+            <p>📍 [Address], [Town], CT</p>
+          </div>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-6 border border-white/10">
+          <form class="space-y-3">
+            <div class="grid grid-cols-2 gap-3"><input type="text" placeholder="Name" class="w-full px-4 py-2.5 rounded-xl border-0 bg-white text-sm outline-none focus:ring-2 focus:ring-trade-400" /><input type="tel" placeholder="Phone" class="w-full px-4 py-2.5 rounded-xl border-0 bg-white text-sm outline-none focus:ring-2 focus:ring-trade-400" /></div>
+            <input type="email" placeholder="Email" class="w-full px-4 py-2.5 rounded-xl border-0 bg-white text-sm outline-none focus:ring-2 focus:ring-trade-400" />
+            <textarea rows="3" placeholder="Tell us about your project" class="w-full px-4 py-2.5 rounded-xl border-0 bg-white text-sm outline-none focus:ring-2 focus:ring-trade-400 resize-none"></textarea>
+            <button type="button" class="w-full bg-white text-trade-800 font-semibold py-3 rounded-xl hover:bg-gray-100 transition text-sm">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <div class="h-64 bg-gray-300 flex items-center justify-center text-gray-500 text-sm">📍 [Town], CT — Map placeholder</div>
+
+  <footer class="bg-gray-900 text-gray-400 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+      <p>© 2026 [Business Name] · [Town], CT · [License #]</p>
+      <div class="flex gap-4"><span class="hover:text-white cursor-pointer">Google</span><span class="hover:text-white cursor-pointer">Facebook</span><span class="hover:text-white cursor-pointer">Instagram</span></div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') }) }, {threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Counter animation
+    document.querySelectorAll('.count-up').forEach(el => {
+      const target = parseInt(el.dataset.target);
+      const step = target / 40;
+      let current = 0;
+      const interval = setInterval(() => { current += step; if(current >= target) { el.textContent = target; clearInterval(interval) } else { el.textContent = Math.floor(current) } }, 30);
+    });
+
+    // Lightbox
+    function openLightbox(src) { document.getElementById('lightbox-img').src = src; document.getElementById('lightbox').classList.add('open') }
+
+    // Carousel
+    let carouselPos = 0;
+    function moveCarousel(dir) {
+      const track = document.getElementById('carouselTrack');
+      const slides = track.children.length;
+      carouselPos = (carouselPos + dir + slides) % slides;
+      track.style.transform = `translateX(-${carouselPos * 100}%)`;
+    }
+    setInterval(() => moveCarousel(1), 5000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Business Name] · [Town], CT — Premium [Trade] Services</title>
+  <meta name="description" content="[Business Name] — [Town]'s trusted [trade] service since [year]. Licensed, insured, BBB rated. Call (203) 555-0000." />
+  <meta property="og:title" content="[Business Name] · [Town], CT" />
+  <meta property="og:description" content="Premium [trade] services for [Town] and Fairfield County." />
+  <meta property="og:type" content="website" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"[Business Name]","telephone":"(203) 555-0000","address":{"@type":"PostalAddress","addressLocality":"[Town]","addressRegion":"CT"},"areaServed":"[County]"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif']},colors:{trade:{50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af',900:'#1e3a8a'}}}}}</script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}body{font-family:'Inter',system-ui,sans-serif}
+    .hero-bg{background:linear-gradient(165deg,#0f172a,#1e3a8a,#2563eb)}.hero-bg::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,.03)" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"/></svg>');background-size:cover;background-position:bottom;opacity:.4;pointer-events:none}
+    .card-hover{transition:all .3s ease}.card-hover:hover{transform:translateY(-4px);box-shadow:0 20px 40px -12px rgba(0,0,0,.12)}
+    .reveal{opacity:0;transform:translateY(30px);transition:all .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    .parallax{background-attachment:fixed;background-size:cover;background-position:center}
+    /* Accordion */ .faq-q{cursor:pointer;padding:16px 0;border-bottom:1px solid #e5e7eb;display:flex;justify-content:space-between;align-items:center;font-weight:600}.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;color:#6b7280;font-size:14px;line-height:1.7}.faq-a.open{max-height:300px;padding-bottom:16px}.faq-q .arrow{transition:transform .3s}.faq-q .arrow.open{transform:rotate(180deg)}
+    /* Lightbox */ .lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.9);z-index:999;justify-content:center;align-items:center}.lightbox.open{display:flex}.lightbox img{max-width:90%;max-height:90%;border-radius:12px}.lightbox .close{position:absolute;top:20px;right:30px;color:white;font-size:30px;cursor:pointer}
+    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}.gallery-grid img{width:100%;height:200px;object-fit:cover;border-radius:12px;cursor:pointer;transition:transform .3s}.gallery-grid img:hover{transform:scale(1.03)}
+    .pricing-card{border:2px solid #e5e7eb;border-radius:16px;padding:28px;text-align:center;transition:all .3s}.pricing-card.featured{border-color:#2563eb;background:#eff6ff}.pricing-card:hover{border-color:#93c5fd}
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+  <div id="lightbox" class="lightbox" onclick="this.classList.remove('open')"><span class="close">&times;</span><img id="lightbox-img" src="" alt="" /></div>
+
+  <div class="fixed top-0 w-full z-50">
+    <div class="bg-trade-900 text-white/80 text-xs text-center py-1.5 tracking-wide">🚨 Emergency service available 24/7 — <span class="font-bold text-white">(203) 555-0000</span></div>
+    <nav class="bg-white/90 backdrop-blur-md border-b border-gray-200">
+      <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+        <a href="#" class="font-bold text-lg text-trade-800">🔧 [Business Name]</a>
+        <div class="hidden md:flex gap-6 text-sm font-medium text-gray-600">
+          <a href="#gallery" class="hover:text-trade-600">Gallery</a>
+          <a href="#services" class="hover:text-trade-600">Services</a>
+          <a href="#pricing" class="hover:text-trade-600">Pricing</a>
+          <a href="#team" class="hover:text-trade-600">Team</a>
+          <a href="#reviews" class="hover:text-trade-600">Reviews</a>
+          <a href="#blog" class="hover:text-trade-600">Blog</a>
+          <a href="#faq" class="hover:text-trade-600">FAQ</a>
+          <a href="#contact" class="hover:text-trade-600">Contact</a>
+        </div>
+        <a href="#contact" class="bg-trade-600 hover:bg-trade-700 text-white text-sm font-semibold px-5 py-2.5 rounded-full transition">Book Now</a>
+      </div>
+    </nav>
+  </div>
+
+  <section class="hero-bg pt-20 min-h-[75vh] flex items-center relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 py-20 w-full relative z-10">
+      <span class="inline-block bg-white/10 text-white/90 text-xs font-semibold px-4 py-1.5 rounded-full mb-5 border border-white/20">🏆 [N]-year [Town] tradition · [N]+ projects</span>
+      <h1 class="text-5xl sm:text-6xl font-extrabold text-white leading-[1.05] max-w-3xl">[Headline — a bold, specific promise.]</h1>
+      <p class="text-white/60 text-xl mt-4 max-w-xl">[Subheadline — what you deliver, who you serve, what makes you different.]</p>
+      <div class="flex flex-wrap gap-4 mt-8">
+        <a href="#contact" class="bg-white text-trade-800 font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition shadow-xl text-sm">📋 Free Consultation</a>
+        <a href="tel:2035550000" class="border-2 border-white/30 text-white font-medium px-8 py-3.5 rounded-full hover:bg-white/10 transition text-sm">📞 (203) 555-0000</a>
+      </div>
+      <div class="flex items-center gap-6 mt-10 text-white/50 text-sm flex-wrap">
+        <span>⭐ 4.9 · [N] reviews</span><span class="w-1 h-1 bg-white/20 rounded-full"></span>
+        <span>✅ Licensed & Insured</span><span class="w-1 h-1 bg-white/20 rounded-full"></span>
+        <span>🏆 BBB A+</span><span class="w-1 h-1 bg-white/20 rounded-full"></span>
+        <span>🕐 Same-day available</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-white border-b border-gray-200 py-6">
+    <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div><div class="text-3xl font-extrabold text-trade-600" data-target="20">0</div><div class="text-xs text-gray-500 mt-1">Years serving [Town]</div></div>
+      <div><div class="text-3xl font-extrabold text-trade-600" data-target="850">0</div><div class="text-xs text-gray-500 mt-1">Projects delivered</div></div>
+      <div><div class="text-3xl font-extrabold text-trade-600" data-target="99">0</div><div class="text-xs text-gray-500 mt-1">% satisfaction rate</div></div>
+      <div><div class="text-3xl font-extrabold text-trade-600" data-target="4.9">0</div><div class="text-xs text-gray-500 mt-1">Average rating</div></div>
+    </div>
+  </div>
+
+  <section id="gallery" class="py-20 reveal">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12"><span class="text-trade-600 text-sm font-semibold tracking-wide uppercase">Portfolio</span><h2 class="text-3xl font-bold mt-2">Recent Work</h2></div>
+      <div class="gallery-grid">
+        <img src="https://placehold.co/600x400/1e40af/white?text=Project+1" alt="" onclick="document.getElementById('lightbox-img').src=this.src;document.getElementById('lightbox').classList.add('open')" />
+        <img src="https://placehold.co/600x400/2563eb/white?text=Project+2" alt="" onclick="document.getElementById('lightbox-img').src=this.src;document.getElementById('lightbox').classList.add('open')" />
+        <img src="https://placehold.co/600x400/1e3a8a/white?text=Project+3" alt="" onclick="document.getElementById('lightbox-img').src=this.src;document.getElementById('lightbox').classList.add('open')" />
+        <img src="https://placehold.co/600x400/3b82f6/white?text=Project+4" alt="" onclick="document.getElementById('lightbox-img').src=this.src;document.getElementById('lightbox').classList.add('open')" />
+        <img src="https://placehold.co/600x400/60a5fa/white?text=Project+5" alt="" onclick="document.getElementById('lightbox-img').src=this.src;document.getElementById('lightbox').classList.add('open')" />
+        <img src="https://placehold.co/600x400/93c5fd/black?text=Project+6" alt="" onclick="document.getElementById('lightbox-img').src=this.src;document.getElementById('lightbox').classList.add('open')" />
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-20 bg-white reveal">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12"><span class="text-trade-600 text-sm font-semibold tracking-wide uppercase">Expertise</span><h2 class="text-3xl font-bold mt-2">Our Services</h2></div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-gray-50 rounded-xl p-6 card-hover"><span class="text-4xl">🔹</span><h3 class="font-bold mt-3">[Service 1]</h3><p class="text-gray-500 text-sm mt-2">Detailed description including what's included, typical timeline, and who it's for.</p></div>
+        <div class="bg-gray-50 rounded-xl p-6 card-hover"><span class="text-4xl">🔹</span><h3 class="font-bold mt-3">[Service 2]</h3><p class="text-gray-500 text-sm mt-2">Detailed description including what's included, typical timeline, and who it's for.</p></div>
+        <div class="bg-gray-50 rounded-xl p-6 card-hover"><span class="text-4xl">🔹</span><h3 class="font-bold mt-3">[Service 3]</h3><p class="text-gray-500 text-sm mt-2">Detailed description including what's included, typical timeline, and who it's for.</p></div>
+        <div class="bg-gray-50 rounded-xl p-6 card-hover"><span class="text-4xl">🔹</span><h3 class="font-bold mt-3">[Service 4]</h3><p class="text-gray-500 text-sm mt-2">Detailed description including what's included, typical timeline, and who it's for.</p></div>
+        <div class="bg-gray-50 rounded-xl p-6 card-hover"><span class="text-4xl">🔹</span><h3 class="font-bold mt-3">[Service 5]</h3><p class="text-gray-500 text-sm mt-2">Detailed description including what's included, typical timeline, and who it's for.</p></div>
+        <div class="bg-gray-50 rounded-xl p-6 card-hover"><span class="text-4xl">🔹</span><h3 class="font-bold mt-3">[Service 6]</h3><p class="text-gray-500 text-sm mt-2">Detailed description including what's included, typical timeline, and who it's for.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="py-20 reveal">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12"><span class="text-trade-600 text-sm font-semibold tracking-wide uppercase">Pricing</span><h2 class="text-3xl font-bold mt-2">Transparent pricing, no surprises</h2></div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="pricing-card"><h3 class="font-bold text-lg">Basic</h3><div class="text-3xl font-extrabold mt-3">$[X]</div><p class="text-sm text-gray-500 mt-1">[What this tier covers]</p><ul class="text-sm text-left mt-5 space-y-2"><li>✅ [Item 1]</li><li>✅ [Item 2]</li><li>✅ [Item 3]</li></ul></div>
+        <div class="pricing-card featured"><h3 class="font-bold text-lg">Standard</h3><div class="text-3xl font-extrabold mt-3">$[Y]</div><p class="text-sm text-gray-500 mt-1">[What this tier covers — most popular]</p><ul class="text-sm text-left mt-5 space-y-2"><li>✅ Everything in Basic</li><li>✅ [Extra item 1]</li><li>✅ [Extra item 2]</li><li>✅ [Extra item 3]</li></ul><a href="#contact" class="block mt-6 bg-trade-600 text-white text-sm font-semibold py-3 rounded-xl hover:bg-trade-700 transition">Get Started</a></div>
+        <div class="pricing-card"><h3 class="font-bold text-lg">Premium</h3><div class="text-3xl font-extrabold mt-3">$[Z]</div><p class="text-sm text-gray-500 mt-1">[What this premium tier includes]</p><ul class="text-sm text-left mt-5 space-y-2"><li>✅ Everything in Standard</li><li>✅ [Extra item 1]</li><li>✅ [Extra item 2]</li><li>✅ [Extra item 3]</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="py-20 bg-white reveal">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12"><span class="text-trade-600 text-sm font-semibold tracking-wide uppercase">Team</span><h2 class="text-3xl font-bold mt-2">Meet the professionals</h2></div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center"><div class="w-28 h-28 mx-auto rounded-full bg-trade-100 flex items-center justify-center text-4xl mb-4">👤</div><h3 class="font-bold text-lg">[Name]</h3><p class="text-sm text-gray-500">Owner · [N] years</p><p class="text-xs text-gray-400 mt-2">[Short bio — background, philosophy, what they bring.]</p></div>
+        <div class="text-center"><div class="w-28 h-28 mx-auto rounded-full bg-trade-100 flex items-center justify-center text-4xl mb-4">👤</div><h3 class="font-bold text-lg">[Name]</h3><p class="text-sm text-gray-500">[Role] · [N] years</p><p class="text-xs text-gray-400 mt-2">[Short bio.]</p></div>
+        <div class="text-center"><div class="w-28 h-28 mx-auto rounded-full bg-trade-100 flex items-center justify-center text-4xl mb-4">👤</div><h3 class="font-bold text-lg">[Name]</h3><p class="text-sm text-gray-500">[Role] · [N] years</p><p class="text-xs text-gray-400 mt-2">[Short bio.]</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="py-20 reveal">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-10"><span class="text-trade-600 text-sm font-semibold tracking-wide uppercase">Testimonials</span><h2 class="text-3xl font-bold mt-2">What our clients say</h2></div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-white rounded-xl p-6 border card-hover"><p class="text-sm leading-relaxed">"[Detailed client testimonial describing the project and results.]"</p><p class="text-xs text-gray-400 mt-4">— [Name], [Town]</p></div>
+        <div class="bg-white rounded-xl p-6 border card-hover"><p class="text-sm leading-relaxed">"[Detailed client testimonial describing the project and results.]"</p><p class="text-xs text-gray-400 mt-4">— [Name], [Town]</p></div>
+        <div class="bg-white rounded-xl p-6 border card-hover"><p class="text-sm leading-relaxed">"[Detailed client testimonial describing the project and results.]"</p><p class="text-xs text-gray-400 mt-4">— [Name], [Town]</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="py-20 bg-white reveal">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12"><span class="text-trade-600 text-sm font-semibold tracking-wide uppercase">Latest</span><h2 class="text-3xl font-bold mt-2">From our blog</h2></div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="border rounded-xl overflow-hidden card-hover"><div class="h-40 bg-trade-100"></div><div class="p-5"><p class="text-xs text-trade-600 font-semibold uppercase tracking-wide">[Category]</p><h3 class="font-bold mt-1">[Blog post title]</h3><p class="text-sm text-gray-500 mt-2">Excerpt of the article — a few lines to draw readers in.</p></div></div>
+        <div class="border rounded-xl overflow-hidden card-hover"><div class="h-40 bg-trade-100"></div><div class="p-5"><p class="text-xs text-trade-600 font-semibold uppercase tracking-wide">[Category]</p><h3 class="font-bold mt-1">[Blog post title]</h3><p class="text-sm text-gray-500 mt-2">Excerpt of the article — a few lines to draw readers in.</p></div></div>
+        <div class="border rounded-xl overflow-hidden card-hover"><div class="h-40 bg-trade-100"></div><div class="p-5"><p class="text-xs text-trade-600 font-semibold uppercase tracking-wide">[Category]</p><h3 class="font-bold mt-1">[Blog post title]</h3><p class="text-sm text-gray-500 mt-2">Excerpt of the article — a few lines to draw readers in.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-20 reveal">
+    <div class="max-w-3xl mx-auto px-6">
+      <div class="text-center mb-12"><span class="text-trade-600 text-sm font-semibold tracking-wide uppercase">FAQ</span><h2 class="text-3xl font-bold mt-2">Common questions</h2></div>
+      <div>
+        <div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('.arrow').classList.toggle('open')"><span>How much does a typical [service] cost?</span><span class="arrow">▼</span></div><div class="faq-a">[Answer explaining pricing philosophy, free estimates, and what factors affect cost.]</div>
+        <div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('.arrow').classList.toggle('open')"><span>How quickly can you get someone out here?</span><span class="arrow">▼</span></div><div class="faq-a">[Answer about response times, emergency vs scheduled service, and service area.]</div>
+        <div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('.arrow').classList.toggle('open')"><span>Are you licensed and insured?</span><span class="arrow">▼</span></div><div class="faq-a">[Answer with license numbers, insurance details, and any relevant certifications.]</div>
+        <div class="faq-q" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('.arrow').classList.toggle('open')"><span>Do you offer warranties on your work?</span><span class="arrow">▼</span></div><div class="faq-a">[Answer about workmanship guarantees, manufacturer warranties, and satisfaction policy.]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking -->
+  <section class="py-20 bg-trade-800 reveal">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-white">Book online in 60 seconds</h2>
+      <p class="text-white/60 mt-3 max-w-lg mx-auto">Choose a service, pick a time, and we'll confirm within the hour.</p>
+      <a href="#" class="inline-block mt-6 bg-white text-trade-800 font-semibold px-8 py-3.5 rounded-full hover:bg-gray-100 transition shadow-xl">📅 Book Now</a>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-gray-900 reveal">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-3xl font-bold text-white">Get in touch</h2>
+          <p class="text-gray-400 mt-3 text-sm">Ready to get started? Call us, stop by, or send a message.</p>
+          <div class="mt-6 space-y-4 text-gray-400 text-sm">
+            <p class="flex items-center gap-3">📞 <span class="text-white font-bold">(203) 555-0000</span></p>
+            <p class="flex items-center gap-3">✉️ <span class="text-white">hello@[business].com</span></p>
+            <p class="flex items-center gap-3">📍 <span class="text-white">[Street Address], [Town], CT [ZIP]</span></p>
+            <p class="flex items-center gap-3">🕐 <span class="text-white">Mon–Fri 7am–6pm · Sat 8am–2pm · 24/7 emergency</span></p>
+          </div>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-6 border border-white/10">
+          <form class="space-y-3">
+            <div class="grid grid-cols-2 gap-3"><input type="text" placeholder="Name" class="w-full px-4 py-2.5 rounded-xl border-0 bg-white text-sm outline-none" /><input type="tel" placeholder="Phone" class="w-full px-4 py-2.5 rounded-xl border-0 bg-white text-sm outline-none" /></div>
+            <input type="email" placeholder="Email" class="w-full px-4 py-2.5 rounded-xl border-0 bg-white text-sm outline-none" />
+            <select class="w-full px-4 py-2.5 rounded-xl border-0 bg-white text-sm outline-none"><option>[Select service]</option><option>[Service 1]</option><option>[Service 2]</option><option>[Service 3]</option></select>
+            <textarea rows="3" placeholder="Tell us about your project" class="w-full px-4 py-2.5 rounded-xl border-0 bg-white text-sm outline-none resize-none"></textarea>
+            <button type="button" class="w-full bg-trade-600 hover:bg-trade-700 text-white font-semibold py-3 rounded-xl transition text-sm">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="h-64 bg-gray-700 flex items-center justify-center text-gray-400 text-sm">📍 [Town], CT — Interactive map</div>
+
+  <footer class="bg-gray-950 text-gray-500 py-10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 text-sm">
+        <div><h4 class="font-bold text-white mb-3">🔧 [Business Name]</h4><p class="text-xs leading-relaxed">Serving [Town] and Fairfield County since [year]. Licensed, insured, and committed to quality.</p></div>
+        <div><h4 class="font-bold text-white mb-3">Services</h4><ul class="space-y-1 text-xs"><li>[Service 1]</li><li>[Service 2]</li><li>[Service 3]</li><li>[Service 4]</li></ul></div>
+        <div><h4 class="font-bold text-white mb-3">Quick Links</h4><ul class="space-y-1 text-xs"><li>Gallery</li><li>Pricing</li><li>FAQ</li><li>Blog</li></ul></div>
+        <div><h4 class="font-bold text-white mb-3">Contact</h4><ul class="space-y-1 text-xs"><li>(203) 555-0000</li><li>[Address]</li><li>Mon–Sat</li></ul></div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-6 text-center text-xs">© 2026 [Business Name] · [Town], CT · All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => { entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') }) }, {threshold:.1});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll('[data-target]').forEach(el => { const t = parseFloat(el.dataset.target); const step = t / 40; let c = 0; const i = setInterval(() => { c += step; if(c >= t) { el.textContent = t; clearInterval(i) } else { el.textContent = Math.floor(c) } }, 30) });
+  </script>
+</body>
+</html>
